@@ -90,6 +90,7 @@ class Blockchain(object):
     def getLocation(self, cid):
         """
         Use file system api to retrive location by CID, unimplemented.
+
         Pseudocode: 
         
         location = ReadFromTableDirectory(cid)
@@ -248,8 +249,10 @@ def createCID(file):
     Takes raw data as input and spits into chunks, and hashes it to create CID, unimplemented
     
     Pseudocode:
+
     chunks = chunkify(file)
     cid = hash(chunks)
+
     return cid
     """
     return hash(file)
@@ -354,7 +357,9 @@ def mine():
     if newBlock :
         """
         Write file to directory, unimplemented.
+
         Pseudocode:
+
         #finds free blocks in directory and allocates them to file from new block
         Write(filename=newBlock['cid'], input=newBlock['rawdata'])
         """
